@@ -2,10 +2,13 @@ import User from '../models/user.model.js';
 import bcryptjs from 'bcryptjs';
 import { errorHandler } from '../utils/error.js';
 import jwt from 'jsonwebtoken';
-
+import dotenv from "dotenv";
+dotenv.config('./.env');
+ const JWT_SECRET = "VIDITPANDEY06";
+console.log(process.env.JWT_SECRET);
 export const signup = async (req, res, next) => {
   const { username, email, password } = req.body;
-
+  console.log(process.env.JWT_SECRET);
   if (
     !username ||
     !email ||
@@ -51,7 +54,7 @@ export const signin = async (req, res, next) => {
     }
     const token = jwt.sign(
       { id: validUser._id, isAdmin: validUser.isAdmin },
-      process.env.JWT_SECRET
+      JWT_SECRET
     );
 
     const { password: pass, ...rest } = validUser._doc;
