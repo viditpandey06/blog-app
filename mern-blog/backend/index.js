@@ -7,12 +7,14 @@ import postRoutes from "./routes/post.route.js";
 import commentRoutes from "./routes/comment.route.js";
 import cookieParser from "cookie-parser";
 import path from "path";
-
-dotenv.config();
-
+import { log } from "console";
+dotenv.config({
+  path: "mern-blog\\backend.env",
+});
+const MONGO_URL ="mongodb+srv://viditpandey06:DOIVLzGHE3uZh0FA@cluster0.fecyznp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+console.log(MONGO_URL);
 mongoose
-  .connect(process.env.MONGO_URI
-  )
+  .connect(MONGO_URL)
   .then(() => {
     console.log("MongoDb is connected");
   })
@@ -21,6 +23,7 @@ mongoose
   });
 
 const __dirname = path.resolve();
+console.log(__dirname);
 
 const app = express();
 
@@ -30,11 +33,14 @@ app.use(cookieParser());
 app.listen(3000, () => {
   console.log("Server is running on port 3000!");
 });
+// app.get("/vidit", (req, res) => {
+//   res.json("Signup successful");
+// });
 
-app.use("/backend/user", userRoutes);
-app.use("/backend/auth", authRoutes);
-app.use("/backend/post", postRoutes);
-app.use("/backend/comment", commentRoutes);
+app.use("/api/user", userRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/post", postRoutes);
+app.use("/api/comment", commentRoutes);
 
 app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
