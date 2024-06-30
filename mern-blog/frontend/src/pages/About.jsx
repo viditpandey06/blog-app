@@ -4,28 +4,22 @@ export default function About() {
       <div className='max-w-2xl mx-auto p-3 text-center'>
         <div>
           <h1 className='text-3xl font font-semibold text-center my-7'>
-            About Sahand' Blog
+            About VIDIT' Blog
           </h1>
           <div className='text-md text-gray-500 flex flex-col gap-6'>
             <p>
-              Welcome to Sahand's Blog! This blog was created by Sahand Ghavidel
-              as a personal project to share his thoughts and ideas with the
-              world. Sahand is a passionate developer who loves to write about
-              technology, coding, and everything in between.
+              Hi there! I'm Vidit Pandey, a BTech Computer Science student and full-stack developer with a knack for crafting engaging and informative content. This blog is my platform to share my knowledge, explore new ideas, and connect with fellow tech enthusiasts.
             </p>
 
             <p>
-              On this blog, you'll find weekly articles and tutorials on topics
-              such as web development, software engineering, and programming
-              languages. Sahand is always learning and exploring new
-              technologies, so be sure to check back often for new content!
+              This blog is your one-stop shop for all things tech, with new articles and tutorials dropping every week. Dive deep into web development, software engineering, and the exciting world of programming languages. Sahand is a lifelong learner, constantly exploring the latest advancements in the tech field. Stay tuned for fresh content that keeps you informed and inspired!
             </p>
 
             <p>
               We encourage you to leave comments on our posts and engage with
-              other readers. You can like other people's comments and reply to
-              them as well. We believe that a community of learners can help
-              each other grow and improve.
+              other readers. Your feedback is invaluable to us, and we're always
+              looking for ways to improve our content. If you have any questions
+              or suggestions, feel free to reach out to us at viditpandey06@gmail.com
             </p>
           </div>
         </div>
