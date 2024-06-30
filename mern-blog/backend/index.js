@@ -8,11 +8,10 @@ import commentRoutes from "./routes/comment.route.js";
 import cookieParser from "cookie-parser";
 import path from "path";
 import { log } from "console";
-dotenv.config({
-  path: "mern-blog\\backend.env",
-});
+dotenv.config('.env');
 const MONGO_URL ="mongodb+srv://viditpandey06:DOIVLzGHE3uZh0FA@cluster0.fecyznp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-console.log(MONGO_URL);
+//console.log(MONGO_URL);
+console.log(process.env.MONGO_URL);
 mongoose
   .connect(MONGO_URL)
   .then(() => {
