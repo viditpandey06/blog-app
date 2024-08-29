@@ -16,7 +16,7 @@ export default function About() {
             </p>
 
             <p>
-              We encourage you to leave comments on our posts and engage with
+              I encourage you to leave comments on our posts and engage with
               other readers. Your feedback is invaluable to us, and we're always
               looking for ways to improve our content. If you have any questions
               or suggestions, feel free to reach out to us at viditpandey06@gmail.com
